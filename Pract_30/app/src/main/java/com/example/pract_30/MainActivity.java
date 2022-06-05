@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.putExtra(Intent.EXTRA_EMAIL, rec.getText().toString());
                 intent.putExtra(Intent.EXTRA_SUBJECT, sub.getText().toString());
-                intent.putExtra(Intent.EXTRA_TEXT, sub.getText().toString());
+                intent.putExtra(Intent.EXTRA_TEXT, msg.getText().toString());
                 startActivity(Intent.createChooser(intent, "Email Sent"));
                 Toast.makeText(MainActivity.this, "Email sent", Toast.LENGTH_SHORT).show();
             }
